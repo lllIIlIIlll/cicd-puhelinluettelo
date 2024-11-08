@@ -16,11 +16,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install dependencies
+
+      - name: Install backend dependencies
         run: npm install
+
+      - name: Install frontend dependencies
+        working-directory: ./puhelinluettelo_frontend
+        run: npm install
+
       - name: Check style
         run: npm run lint
-      - name: Make build script executable
-        run: chmod +x ../../build-step.sh
+
       - name: Build
-        run: ../../build-step.sh
+        run: npm run build:ui
