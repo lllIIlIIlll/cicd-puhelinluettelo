@@ -29,6 +29,7 @@ module.exports = {
     'no-undef': 'off',
     'react/prop-types': 0,
     'react/react-in-jsx-scope': 'off',
+    /*
     'no-unused-vars': [
       'error',
       {
@@ -36,6 +37,7 @@ module.exports = {
         varsIgnorePattern: '^_',
       },
     ],
+    */
   },
   ignorePatterns: ['/dist', '/puhelinluettelo_frontend/dist'],
 }

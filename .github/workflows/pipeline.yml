@@ -43,9 +43,10 @@ jobs:
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
           title: Deployment Succeeded
-          message: 'https://full-stack-open-pokedex-8yjd.onrender.com'
+          message: 'https://cicd-puhelinluettelo-3cqb.onrender.com'
           username: Puhelinluettelo
           colour: '#00ff00'
+
       - name: Discord Build Fail
         uses: stegzilla/discord-notify@v2
         if: failure()
