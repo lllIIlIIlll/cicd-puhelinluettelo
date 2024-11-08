@@ -29,3 +29,10 @@ jobs:
 
       - name: Build
         run: npm run build:ui
+
+      - name: Render Deploy Action
+        if: ${{ github.event_name == 'push' && !contains(toJson(github.event.commits.*.message), '#skip')}}
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.MY_RENDER_API_KEY }}
