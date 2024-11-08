@@ -89,7 +89,7 @@ const App = () => {
 
   return (
     <div>
-      <h2>Phonebook 2.0</h2>
+      <h2>Phonebook 2.0.01</h2>
       <Notification message={notification} />
       <Filter newSearch={newSearch} handleSearchChange={handleSearchChange} />
       <h2>add new</h2>
